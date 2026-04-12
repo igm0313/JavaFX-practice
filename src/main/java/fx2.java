@@ -7,7 +7,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.ArcType;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+import javafx.scene.text.Font;
 import javafx.scene.paint.Color;
+
 //--module-path "C:\Users\igm03\Downloads\openjfx-26_windows-x64_bin-sdk
 // \javafx-sdk-26\lib" --add-modules javafx.controls,javafx.fxml
 
@@ -34,6 +36,10 @@ public class fx2 extends Application { //부모클래스 Application을 받아�
         gc.fillOval(230, 100, 10, 20); //속이 찬 원
         gc.setFill(Color.YELLOW);
         gc.strokeArc(150, 160, 100, 50, 180, 180, ArcType.OPEN); // 호 그리기
+
+        gc.setFill(Color.BLACK);
+        gc.setFont(Font.font("Times New Roman",30));
+        gc.fillText("Hello!",300,40);
 
         root.getChildren().add(canvas); //캔버스를 그룹안에 넣음
         primaryStage.setTitle("Happy face in JavaFX"); //프로그램 이름
